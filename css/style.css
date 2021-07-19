@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    padding: 60px;
+    text-align: center;
+    background-color: aqua;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    background-color: aquamarine;
+    height: 50px;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+}
+
+nav a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+nav a:hover {
+    color: blueviolet;
+    background-color: #fff;
+}
+
+nav label {}
+
+nav label,
+.checkbox-menu {
+    display: none;
+}
+
+.row {
+    display: flex;
+    /*    flex-wrap: wrap;*/
+}
+
+.row aside {
+    flex: 0 1 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.row main {
+    flex: 0 1 70%;
+    background-color: #ddd4d4;
+    padding: 20px;
+}
+
+.fake-img img {
+    width: 100%;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: green;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    /*
+    header {
+        background-color: coral;
+                }
+*/
+    .row,
+    ul,
+    nav {
+        flex-direction: column;
+    }
+
+
+    nav ul {
+        display: none;
+        user-select: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        background-color: burlywood;
+    }
+
+    nav ul a {
+        display: flex;
+        justify-content: center;
+        color: darkmagenta;
+        transition: all 3s ease-in-out;
+
+    }
+
+
+    nav label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    label .toggle {
+        color: darkblue;
+        font-size: 45px;
+
+    }
+
+    .checkbox-menu:checked ~ ul {
+        display: flex;
+        z-index: 1;
+
+    }
+
+}
